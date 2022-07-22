@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+@using Marketplace.Models;
+<h3>Here are all the orders for this vendor:</h3>
+<ul>
+  @foreach(Order order in @Model["orders"])
+  {
+    <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
+  }
+</ul>
+<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add New Order</a></p>
+<p><a href="/">Home</a></p>
+<p><a href="/vendors">Back to Vendors</a></p>
