@@ -14,7 +14,7 @@ namespace Bakery.Models
       _instances.Add(this);
     }
 
-    public static int GetLoafPrice()
+    public static int GetBreadPrice()
     {
       int breadCount = _instances.Count;
       int breadPrice = 0;
@@ -23,7 +23,7 @@ namespace Bakery.Models
       {
         breadList.Add(i);
       }
-      foreach(int bread in loafList)
+      foreach(int bread in breadList)
       {
         if(bread % 3 == 0)
         {

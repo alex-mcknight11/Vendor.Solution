@@ -20,8 +20,8 @@ namespace Bakery.Models
       Date = date;
       _instances.Add(this);
       Id = _instances.Count;
-      Breads = new List<Bread>{};
-      Pastries = new List<Pastry>{};
+      Bread = new List<Bread>{};
+      Pastry = new List<Pastry>{};
     }
     public static List<Order> GetAll()
     {
@@ -37,11 +37,11 @@ namespace Bakery.Models
     }
     public void AddBread(Bread bread)
     {
-      Breads.Add(bread);
+      Bread.Add(bread);
     }
     public void AddPastry(Pastry pastry)
     {
-      Pastries.Add(pastry);
+      pastry.Add(pastry);
     }
   }
 }
