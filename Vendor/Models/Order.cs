@@ -20,28 +20,21 @@ namespace Bakery.Models
       Date = date;
       _instances.Add(this);
       Id = _instances.Count;
-      Bread = new List<Bread>{};
-      Pastry = new List<Pastry>{};
     }
-    public static List<Order> GetAll()
-    {
-      return _instances;
-    }
-    public static Order Find(int searchId)
-    {
-      return _instances[searchId-1];
-    }
+
     public static void ClearAll()
     {
       _instances.Clear();
     }
-    public void AddBread(Bread bread)
+
+    public static List<Order> GetAll()
     {
-      Bread.Add(bread);
+      return _instances;
     }
-    public void AddPastry(Pastry pastry)
+
+    public static Order Find(int searchId)
     {
-      pastry.Add(pastry);
+      return _instances[searchId-1];
     }
   }
 }
